@@ -11,3 +11,107 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.main{
+  flex:1;
+}
+.products{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.producttext{
+  padding: 1rem;
+}
+
+.product{
+  margin: 16px;
+}
+
+.product img{
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+}
+
+
+.sitecontainer{
+  min-height: 100vh;
+}
+
+.rating span {
+  color: #ffc000;
+}
+
+.img-large{
+  max-width: 100%;
+}
+
+.img-thumbnail{
+  height: 80px;
+}
+
+
+.small-container{
+  max-width: 600px;
+}
+
+.checkout-steps > div{
+  border-bottom: 0.2rem solid #a0a0a0;
+  color: #a0a0a0;
+
+}
+.checkout-steps > div.active{
+  border-bottom:0.2rem solid #0077AE;
+  color: #0077AE;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+
+.footer {
+  padding: 0 0 6px 0;
+  background-color: #0077AE;
+  margin-top: 487px;
+  
+}
+
+.footer img {
+  width: 26%;
+}
+.footer p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+  
+  
+}
+
+
+
+/* END Footer */
