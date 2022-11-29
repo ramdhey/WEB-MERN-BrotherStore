@@ -48,11 +48,10 @@ const NavBar = ({change,chek,theme}) => {
 
   return (
     <div>
-    {/* <div className={sidebarIsOpen?"d-flex flex-coloumn site-container active-cont":"d-flex flex-coloumn site-container"}>
-       */}
+   
         <Navbar style={{ backgroundColor: '#E87D0B',width:'100%' }} className="text-white"  expand="lg">
           <Container fluid>
-            {/* <Button variant="dark" onClick={()=>setSidebarIsOpen(!sidebarIsOpen)}><i className="fas fa-bars"></i></Button> */}
+           
             <Navbar.Brand href="/" className="text-white"><img src={lognav} style={{width:'90px'}}/></Navbar.Brand>
             <Navbar.Brand href="/" className="text-white">Brother Store</Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll"  />
@@ -62,13 +61,7 @@ const NavBar = ({change,chek,theme}) => {
                 style={{ maxHeight: "100px",maxWidth:"1030px" }}
                 navbarScroll
               >
-                {/* <Link to="/cart" className="nav-link">
-                    Cart
-                    {cart.cartItems.length > 0 && (
-                      <Badge pill bg="danger">{cart.cartItems.length}</Badge>
-                      
-                    )}
-                  </Link> */}
+               
                 <Nav.Link href="/cart" to="/cart" className="text-white">
                   <i className="fas fa-shopping-cart"></i>
                   {cart.cartItems.length > 0 && (
@@ -77,14 +70,11 @@ const NavBar = ({change,chek,theme}) => {
                     </Badge>
                   )}
                 </Nav.Link>
-                {/* <div className="switchColor">
-                  <label>{theme === "light" ? "Light Mode" : "Dark Mode"}</label>
-                <ReactSwitch onChange={change} checked={chek}/>
-                </div> */}
+              
 
                 {userInfo ? (
                       <NavDropdown title={userInfo.name} id="basic-nav-dropdown"   >
-                        {/* <NavDropdown.Item  href= "/profil" to="/profil">User Profil</NavDropdown.Item> */}
+                       
                         <NavDropdown.Item href= "/riwayatTransaksi" to="/riwayatTransaksi">History Pemesanan</NavDropdown.Item>
                         <NavDropdown.Divider/>
                         <NavDropdown.Item href= "/logout" to="/logout" onClick={logoutHandler}>Logout</NavDropdown.Item>
@@ -104,15 +94,7 @@ const NavBar = ({change,chek,theme}) => {
       
         <div className={sidebarIsOpen ? 'active-nav side-navbar d-flex justify-content-between flex-wrap flex-column' : 'side-navbar d-flex justify-content-between flex-wrap flex-column'}>
 
-          <Nav className="flex-column text-white w-100 p-2"></Nav>
-          <Nav.Item>Category</Nav.Item>
-          {categori.map((category)=>(
-            <Nav.Item key={category}>
-              {/* <LinkContainer to ={`/search?category=${category}`} onClick={()=>setSidebarIsOpen(false)}>
-                <Nav.Link>{category}</Nav.Link>
-              </LinkContainer> */}
-            </Nav.Item>
-          ))}
+         
 
  
         </div>
