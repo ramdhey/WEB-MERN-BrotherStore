@@ -2,7 +2,7 @@ import React, { useEffect, useReducer } from "react";
 import { Link } from "react-router-dom";
 // import data from "./../dummydata";
 import axios from "axios";
-import logger from "use-reducer-logger";
+
 import { Col, Row } from "react-bootstrap";
 import Product from "./../komponen/product";
 import { Helmet } from "react-helmet-async";
@@ -26,7 +26,7 @@ const reducer = (state, action) => {
 
 const Home = () => {
   // const [product,setproduct] = useState([])
-  const [{ loading, error, product }, dispatch] = useReducer(logger(reducer), {
+  const [{ loading, error, product }, dispatch] = useReducer(reducer, {
     product: [],
     loading: true,
     error: "",
