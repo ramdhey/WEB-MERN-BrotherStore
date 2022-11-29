@@ -49,11 +49,11 @@ const Home = () => {
   return (
     <div>
       <Helmet>
-        <title>Rama</title>
+        <title>Brother Store</title>
       </Helmet>
-      <h1>list product</h1>
+      <h1 className="label">My product</h1>
 
-      <div className="products">
+      <div className="products main">
         {loading ? (
           <LoadingBox />
         ) : error ? (

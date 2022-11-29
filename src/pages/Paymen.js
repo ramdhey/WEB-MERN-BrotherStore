@@ -7,7 +7,7 @@ import CheckOut from "../komponen/CheckOut";
 import { Link } from "react-router-dom";
 
 export default function Paymen() {
-  const navigate = useNavigate;
+  const navigate = useNavigate()
   const { state, dispatch: ctxDispatch } = useContext(Store);
 
   const {
@@ -24,10 +24,12 @@ export default function Paymen() {
     }
   }, [shippingAddress, navigate]);
 
+  
   const submitHandler = (e) => {
     e.preventDefault();
     ctxDispatch({ type: 'SAVE_PAYMENT_METHOD', payload: paymentMethodName });
     localStorage.setItem('paymentMethod',paymentMethodName);
+    navigate('/pemesanan')
     
     
     
@@ -67,9 +69,9 @@ export default function Paymen() {
         </Form.Group>
 
         <div className="mb-3">
-          <Link to="/pemesanan">
-          <Button type="submit">Lanjutkan Pembayaran</Button>
-          </Link>
+          
+          <Button type="submit" style={{backgroundColor:'#E87D0B'}}>Lanjutkan Pembayaran</Button>
+          
         </div>
       </Form>
     </div>

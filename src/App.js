@@ -7,24 +7,36 @@ import { Footer } from "./komponen/Footer";
 import { Container } from "react-bootstrap";
 import {ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { createContext } from 'react';
+import { useState } from 'react';
 
+export const ThemeContext = createContext(null)
 
 function App() {
+  const [theme,setTheme] = useState("light")
+  const toggleTheme=()=>{
+    
+    setTheme((curr)=>(curr === "light" ? "dark" : "light"))
+  }
   return (
+  <ThemeContext.Provider value={{theme,toggleTheme}}>
+    <div id={theme}>
     <div className="d-flex flex-column sitecontainer">
       <ToastContainer position="bottom-center" limit={1}/>
       <header>
-        <NavBar/>
+        <NavBar change={toggleTheme} chek={theme === "dark"} theme={theme} />
       </header>
 
-      <main>
+      <main className="main">
       
-        <RouterProject/>
+        <RouterProject />
      
         
       </main>
       <Footer/>
     </div>
+    </div>
+    </ThemeContext.Provider>
   );
 }
 

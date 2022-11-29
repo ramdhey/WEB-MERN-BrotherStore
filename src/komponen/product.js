@@ -28,7 +28,7 @@ function Product(props) {
 
   const { product } = props;
   return (
-    <Card className="product">
+    <Card className="product" style={{height:'600px'}}>
       <Link to={`/product/${product.name}`}>
         <img
           className="card-img-top"

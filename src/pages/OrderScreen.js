@@ -142,19 +142,19 @@ export default function OrderScreen() {
   ) : (
     <div>
       <Helmet>
-        <title>Orderan {orderId}</title>
+        <title>Konfirmasi Pemesanan</title>
       </Helmet>
 
-      <h1 className="my-3">Order {orderId}</h1>
+      <h1 className="my-3">Order Id: {orderId}</h1>
       <Row>
         <Col md={8}>
           <Card className="mb-3">
             <Card.Body>
-              <Card.Title>Pengiriman</Card.Title>
+              <Card.Title>Detail Pengiriman</Card.Title>
               <Card.Text>
-                <strong>Name: </strong> {order.shippingAddress.fullName}
+                <strong>Nama Penerima: </strong> {order.shippingAddress.fullName}
                 <br />
-                <strong>Alamat Pengiriman: </strong>
+                <strong>Alamat Penerima: </strong>
                 {order.shippingAddress.detail},{order.shippingAddress.provinsi},
                 {order.shippingAddress.kota}
               </Card.Text>

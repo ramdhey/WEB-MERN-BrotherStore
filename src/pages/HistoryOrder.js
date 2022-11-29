@@ -54,27 +54,27 @@ export default function HistoryOrder() {
   return (
     <div>
       <Helmet>
-        <title>Riwayat Order</title>
+        <title >Riwayat Order</title>
       </Helmet>
 
-      <h1>Riwayat Transaksi</h1>
+      <h1 className="txt">Riwayat Transaksi</h1>
       {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (
         <MessageBox>{error}</MessageBox>
       ) : (
         <Table striped bordered hover size="sm">
-          <thead>
-            <tr>
-              <th>ID Order</th>
-              <th>Date</th>
-              <th>Pembayaran</th>
-              <th>Pengiriman</th>
-              <th>Total Belanja</th>
-              <th>Aksi</th>
+          <thead className="txt">
+            <tr className="txt">
+              <th className="txt">ID Order</th>
+              <th className="txt">Date</th>
+              <th className="txt">Pembayaran</th>
+              <th className="txt">Pengiriman</th>
+              <th className="txt">Total Belanja</th>
+              <th className="txt">Aksi</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="txt">
             {order.map((order)=>(
                 <tr key={order._id}>
                     <td>{order._id}</td>

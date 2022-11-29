@@ -58,18 +58,22 @@ export default function CartScreen() {
                 {cartItems.map((item) => (
                   <ListGroup.Item key={item._id}>
                     <Row className="align-items-center">
+                      
                       <Col md={4}>
+                      
                         <img
                           className="img-fluid rounded img-thumbnail"
                           src={item.image_url}
                           alt={item.name}
                         ></img>{" "}
-                        <Link to={`/product/${item.name}`}>{item.name}</Link>
+                      <Link style={{marginLeft:'15px'}} to={`/product/${item.name}`}>{item.name}</Link>  
                       </Col>
 
                       {/* plus minus add item */}
+                      
 
                       <Col md={3}>
+                        
                         <Button
                           onClick={() =>
                             updatejumlahHandler(item, item.quantity - 1)
@@ -122,8 +126,9 @@ export default function CartScreen() {
                   <div className="d-grid">
                     <Link to="/address">
                       <Button
+
                         type="button"
-                        variant="primary"
+                        style={{backgroundColor:'#E87D0B'}}
                         disabled={cartItems.length === 0}
                         onClick={checkOutHandler}
                       >

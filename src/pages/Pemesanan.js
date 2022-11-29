@@ -95,7 +95,7 @@ export default function Pemesanan() {
         <Col md={8}>
           <Card className="mb-3">
             <Card.Body>
-              <Card.Title>Detail Order Customer</Card.Title>
+              <Card.Title>Atas Nama</Card.Title>
               <Card.Text>
                 <strong>Nama Penerima : </strong>{" "}
                 {cart.shippingAddress.fullName}
@@ -148,7 +148,7 @@ export default function Pemesanan() {
         </Col>
         <Col md={4}>
           <Card>
-            <Card.Title>Rincian Order </Card.Title>
+            <Card.Title className='rincian'>Rincian Order </Card.Title>
             <ListGroup variant="flush">
               <ListGroup.Item>
                 <Row>
@@ -178,6 +178,7 @@ export default function Pemesanan() {
               <ListGroup.Item>
                 <div>
                   <Button
+                  style={{backgroundColor:'#E87D0B'}}
                     type="button"
                     onClick={buatOrder}
                     disabled={cart.cartItems.length === 0}
