@@ -39,7 +39,7 @@ export default function Profil() {
     e.preventDefault();
     try {
       const { data } = await axios.put(
-        '/user/profil',
+        'https://web-brotherstore.onrender.com/user/profil',
         {
           name,
           password

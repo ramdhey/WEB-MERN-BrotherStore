@@ -16,7 +16,7 @@ export default function CartScreen() {
   } = state;
 
   const updatejumlahHandler = async (item, quantity) => {
-    const { data } = await axios.get(`/product/${item._id}`);
+    const { data } = await axios.get(`https://web-brotherstore.onrender.com/product/${item._id}`);
     if (data.countInStock < quantity) {
       window.alert("Maaf , Kamu Kehabisan , kembali lagi lain waktu ya.");
       return;

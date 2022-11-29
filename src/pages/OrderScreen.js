@@ -75,7 +75,7 @@ export default function OrderScreen() {
       try {
         dispatch({ type: "PAY_REQUEST" });
         const { data } = await axios.put(
-          `/order/${order._id}/pay`,
+          `https://web-brotherstore.onrender.com/order/${order._id}/pay`,
           details,
           {
             headers: { authorization: `Bearer ${userInfo.token}` },
@@ -99,7 +99,7 @@ export default function OrderScreen() {
     const fetchOrder = async () => {
       try {
         dispatch({ type: "FETCH_REQUEST" });
-        const { data } = await axios.get(`/order/${orderId}`, {
+        const { data } = await axios.get(`https://web-brotherstore.onrender.com/order/${orderId}`, {
           headers: { authorization: `Bearer ${userInfo.token}` },
         });
         dispatch({ type: "FETCH_SUCCESS", payload: data });
@@ -117,7 +117,7 @@ export default function OrderScreen() {
       }
     } else {
       const loadPayPalScript = async () => {
-        const { data: clientId } = await axios.get("/paypal", {
+        const { data: clientId } = await axios.get("https://web-brotherstore.onrender.com/paypal", {
           headers: {
             authorization: `Bearer ${userInfo.token}`,
           },

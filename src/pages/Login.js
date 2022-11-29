@@ -25,7 +25,7 @@ function LogIn() {
     const submitHandler = async(e)=>{
         e.preventDefault()
         try {
-            const {data} = await axios.post('user/login',{
+            const {data} = await axios.post('https://web-brotherstore.onrender.com/user/login',{
                 email,password
             })
             ctxDispatch({type:'USER_LOGIN',payload:data})

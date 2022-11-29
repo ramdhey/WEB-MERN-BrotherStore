@@ -15,7 +15,7 @@ function Product(props) {
   const addToCartinCardHandler = async (item) => {
     const existItem = cartItems.find((x) => x._id === product._id);
     const quantity = existItem ? existItem.quantity + 1 : 1;
-    const { data } = await axios.get(`/product/${item._id}`);
+    const { data } = await axios.get(`https://web-brotherstore.onrender.com/product/${item._id}`);
     if (data.countInStock < quantity) {
       window.alert("Maaf , Kamu Kehabisan , kembali lagi lain waktu ya.");
       return;

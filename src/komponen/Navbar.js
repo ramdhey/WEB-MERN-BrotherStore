@@ -36,7 +36,7 @@ const NavBar = ({change,chek,theme}) => {
   useEffect(()=>{
     const fetchCategori = async () =>{
       try {
-        const { data} = await axios.get(`/product/category`)
+        const { data} = await axios.get(`https://web-brotherstore.onrender.com/product/category`)
         setCategory(data)
       } catch (err) {
         toast.error(getError(err))

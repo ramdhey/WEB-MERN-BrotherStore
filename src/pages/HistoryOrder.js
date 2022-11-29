@@ -37,7 +37,7 @@ export default function HistoryOrder() {
     const fetchData = async () => {
       dispatch({ type: "FETCH_REQUEST" });
       try {
-        const { data } = await axios.get(`/order/mine`, {
+        const { data } = await axios.get(`https://web-brotherstore.onrender.com/order/mine`, {
           headers: { authorization: `Bearer ${userInfo.token}` },
         });
         dispatch({ type: "FETCH_SUCCESS", payload: data });

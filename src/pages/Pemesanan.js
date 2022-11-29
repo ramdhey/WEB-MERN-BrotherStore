@@ -49,7 +49,7 @@ export default function Pemesanan() {
     try {
         dispatch({type:'CREATE_REQUEST'})
         const {data} = await axios.post(
-            '/order',
+            'https://web-brotherstore.onrender.com/order',
             {
                 orderItems:cart.cartItems,
                 shippingAddress:cart.shippingAddress,

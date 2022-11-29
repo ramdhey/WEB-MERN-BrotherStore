@@ -31,7 +31,7 @@ function Register() {
           return
         }
         try {
-            const {data} = await axios.post('/user/register',{
+            const {data} = await axios.post('https://web-brotherstore.onrender.com/user/register',{
                 name,email,password
             })
             ctxDispatch({type:'USER_LOGIN',payload:data})
