@@ -60,8 +60,9 @@ const Home = () => {
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
           <Row>
-            {product.map((product) => (
-              <Col key={product._id} sm={6} md={4} lg={3} className="mb-3">
+            {product.map((product,i) => (
+              
+              <Col key={i._id} sm={6} md={4} lg={3} className="mb-3">
                 <Product product={product}></Product>
               </Col>
             ))}
